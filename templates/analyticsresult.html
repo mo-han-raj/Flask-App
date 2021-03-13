@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/static/css/home.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>AnalyticsResults</title>
+        <style>
+            @media screen and (max-width:700px){
+            body{
+                overflow-x: hidden;
+            }
+            .plots{
+                flex-direction: row;
+            }
+
+            }
+            .result{
+                display: flex;
+                justify-content: space-around;
+            }
+            .result p{
+                align-self: center;
+            }
+            .plots{
+                display: flex;
+                justify-content: space-around;
+            }
+            .plots .p1{
+                align-self: center;
+                display:flex;
+                justify-content: space-around;
+                flex-direction: column;
+            }
+            .plots .p2{
+                align-self: center;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+            }
+            .plots img{
+                background-color: rgba(255, 255, 255,0.5);
+                align-self: center;
+            }
+            p{
+                font-family: Poppins;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav style="background-color:rgba(6,58,44,0.5);">
+            <div class="logo">
+              <img src="/static/image/logo.png"></img>
+              <h4 >Seismic Analytical System</h4>
+            </div>
+            <div class="back">
+                <a href="{{url_for('analytics')}}">Go Back</a>
+            </div>
+        </nav>
+        <div class="result">
+            
+            <p id="result" style="font-family: Rock Salt;">This is the Analysis of the year {{year}} </p>
+        </div>
+        <div style="height: 60px;">
+
+        </div>
+        <div class="plots">
+            <div class="p1">
+                <p style="font-size: 20px;">The piechart chart showing seismic events over a year {{year}}</p>
+                <img height="400px" width="500px" src="data:image/png;base64,{{p1}}"></img>
+            </div>
+            <div class="p2">
+                <p style="font-size: 20px;">The top countries with most number of events over a year {{year}}</p>
+                <img height="400px" width="400px" src="data:image/png;base64,{{p2}}"></img>
+            </div>
+        </div>
+    </body>
+    </html>

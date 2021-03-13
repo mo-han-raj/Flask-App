@@ -1,0 +1,51 @@
+
+
+			Python Starter Class
+			`````````````````````````
+Student Name: Mr. Ashley
+`````````````````	
+This schedule only applicable till 26th of October.  	
+---------------------------------------------------------------------------------------------------------------------
+	Schedule				Time
+__________________________________________________________________________________
+Monday 				04.30PM - 05.30PM IST
+
+Tuesday 				05.00PM - 06.00PM IST
+
+Wednesday			04.30PM - 05.30PM IST
+
+Thursday 				09.00PM - 10.00PM IST
+
+Friday				05.00PM - 06.00PM IST
+---------------------------------------------------------------------------------------------------------------------
+Saturday       			02.30PM - 03.30PM IST or
+(Tentative)				06.30PM - 07.30PM IST
+
+---------------------------------------------------------------------------------------------------------------------
+Sunday       			2.30PM - 3.30PM IST or
+(Tentative)				6.30PM - 7.30PM IST
+__________________________________________________________________________________
+Note: For saturdays and sundays every week please confirm before in hand with exact timing.	
+``````	
+*Important Information*
+#After 26th day light saving will be end here so our time difference will become four and half hour.
+#The same timing will become one hour delay (decide for those times ) for example 10pm - 11pm IST.
+#Please note that above is not confirmatory schedule.  Choose from above available timings and tell 
+me exact days you want classes on for confirmation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

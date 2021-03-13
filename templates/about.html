@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/static/css/home.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <title>About</title> 
+        <style>
+            p{
+                font-family: poppins;
+                font-size: 20px;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav style="background-color:rgba(6,58,44,0.5);">
+            <div class="logo">
+              <img src="/static/image/logo.png"></img>
+              <h4 >Seismic Analytical System</h4>
+            </div>
+            <ul class="nav-links">
+              <li>
+                <a href="{{url_for('index')}}">Home</a>
+              </li>
+              <li>
+                <a  href="{{url_for('search')}}">Search</a>
+              </li>
+              <li>
+                <a href="{{url_for('analytics')}}">Analytics</a>
+              </li>
+              <li>
+                <a class="current" href="{{url_for('about')}}">About</a>
+              </li>
+            </ul> 
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>        
+          </nav>
+  
+         
+    <div class="content" style="text-align: center;padding: 14%;">
+    <p><strong>
+        This is the cloud web application developed by Mohanraj Chandrasekar.
+        Seismic Data Analytical System which basically gives analytics and information about
+        the seismic events around the world.  The Data is used from the public API service
+        provided by USGS.  
+    </strong>
+    </p>
+    </div>
+    <script src="/static/javascript/home.js"></script>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/static/css/home.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Search</title>
+        <style>
+            
+            .content{
+            width: 100%;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            flex-direction: column;
+            }
+            .desc{
+                align-self: center;
+            }
+            .form{
+                align-self: center;
+            }
+            input:hover{
+                cursor: pointer;
+
+            }
+            /* Removes the clear button from date inputs */
+            input[type="date"]::-webkit-clear-button {
+                display: none;
+            }
+
+            /* Removes the spin button */
+            input[type="date"]::-webkit-inner-spin-button { 
+                display: none;
+            }
+
+            /* Always display the drop down caret */
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                color: #2c3e50;
+            }
+
+            /* A few custom styles for date inputs */
+            input[type="date"] {
+                appearance: none;
+                -webkit-appearance: none;
+                color: #95a5a6;
+                font-family: "Poppins";
+                font-size: 15px;
+                border:1px solid #ecf0f1;
+                background:#ecf0f1;
+                padding:5px;
+                display: inline-block !important;
+                visibility: visible !important;
+            }
+
+            input[type="date"], focus {
+                color: #95a5a6;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav style="background-color:rgba(6,58,44,0.5);">
+            <div class="logo">
+              <img src="/static/image/logo.png"></img>
+              <h4 >Seismic Analytical System</h4>
+            </div>
+            <ul class="nav-links">
+              <li>
+                <a href="{{url_for('index')}}">Home</a>
+              </li>
+              <li>
+                <a class="current" href="{{url_for('search')}}">Search</a>
+              </li>
+              <li>
+                <a href="{{url_for('analytics')}}">Analytics</a>
+              </li>
+              <li>
+                <a href="{{url_for('about')}}">About</a>
+              </li>
+            </ul> 
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>        
+          </nav>
+  
+          
+        <div class="content">
+            <div class="desc">
+                <div class="container">
+                    <p style="font-family: Rock Salt;"><b>Get All seismic Events here</b>
+                    </p>
+                </div>
+            </div>
+            <div class="form">
+            <form action="{{url_for('searchresult')}}" method="POST">
+                <input type='date' name="Date" id="datefield" min="2020-01-01" required/>
+                <button type="submit"><i class="fa fa-search" style="font-size: 25px;padding-top: 1px;padding-bottom: 9px;"></i></button>
+            </form>
+            </div>
+        </div>
+        <script src="/static/javascript/home.js"></script>
+        <script>
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            if(dd<10){
+                    dd='0'+dd;
+                } 
+            if(mm<10){
+                mm='0'+mm;
+            } 
+            today = yyyy+'-'+mm+'-'+dd;
+            document.getElementById("datefield").setAttribute("max", today);
+        </script> 
+    </body>
+</html>
